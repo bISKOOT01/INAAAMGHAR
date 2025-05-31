@@ -26,3 +26,8 @@ const steps = [
   "Select Item",
   "Submit Payment Proof",
   "Save Your Coupon Number",
+{
+  "REWRITES" [
+    { "SOURCE":"/(.*)", "DESTINATION": "/INDEX.HTML" }
+]
+ }
