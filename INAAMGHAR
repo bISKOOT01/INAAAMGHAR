@@ -1,0 +1,28 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDIEWYA2ow38uyWsIIEcRv4yu_upIf6Y00c",
+  authDomain: "inaam-ghar-f01ef.firebaseapp.com",
+  projectId: "inaam-ghar-f01ef",
+  storageBucket: "inaam-ghar-f01ef.appspot.com",
+  messagingSenderId: "293832570533",
+  appId: "1:293832570533:web:a7c39e03d3c9a5e54dbf4c",
+  measurementId: "G-KJB2GXVE93"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const steps = [
+  "Account Registration",
+  "Select Item",
+  "Submit Payment Proof",
+  "Save Your Coupon Number",
